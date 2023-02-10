@@ -31,31 +31,32 @@ test("Can set email via constructor argument", () => {
 });
 
 test("Can get name via getName()", () => {
-  const emp = new Employee();
   const name = "Miyamoto";
-  const result = emp.getName(name);
+  const emp = new Employee("Miyamoto", 2, "moto@gmail.com");
+  const result = emp.getName();
 
   expect(result).toEqual(name);
 });
 
 test("Can get id via getId()", () => {
-  const emp = new Employee();
-  const id = 12;
-  const result = emp.getId(id);
+  const id = 1584;
+  const emp = new Employee("Miyamoto", 1584, "moto@gmail.com");
+  const result = emp.getId();
 
   expect(result).toEqual(id);
 });
 
 test("Can get email via getEmail()", () => {
-  const emp = new Employee();
-  const email = "miyamoto@gmail.com";
-  const result = emp.getEmail(email);
+  const email = "moto@gmail.com";
+  const emp = new Employee("Miyamoto", 2, "moto@gmail.com");
+  const result = emp.getEmail();
 
   expect(result).toEqual(email);
 });
 
 test("getRole() should return \"Employee\"", () => {
-  const emp = new Employee();
   const role = "Employee";
-  expect(emp.getRole()).toEqual(role);
+  const emp = new Employee("Miyamoto", 2, "moto@gmail.com", "Miyamoto1584");
+
+  expect(emp.getRole()).toBe(role);
 });

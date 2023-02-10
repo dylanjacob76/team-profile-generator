@@ -11,15 +11,15 @@ test("Can set GitHUb account via constructor", () => {
 
 test("getRole() should return \"Engineer\"", () => {
   const role = "Engineer";
-  const engineer = new Engineer("Luffy", 12, "kop@gmail.com");
+  const engineer = new Engineer("Miyamoto", 2, "moto@gmail.com", "Miyamoto1584");
 
   expect(engineer.getRole()).toBe(role);
 });
 
 test("Can get GitHub username via getGithub()", () => {
-  const github = "miyamoto85";
-  const engineer = new Engineer();
-  const result = engineer.getGithub(github);
+  const github = "Miyamoto1584";
+  const engineer = new Engineer("Miyamoto", 2, "moto@gmail.com", "Miyamoto1584");
+  const result = engineer.getGithub();
 
   expect(result).toBe(github);
 });

@@ -8,7 +8,7 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest --verbose test/Intern.test.js"
+    "test": "jest --verbose test/*"
   },
   "repository": {
     "type": "git",
@@ -23,5 +23,8 @@
   "homepage": "https://github.com/dylanjacob76/team-profile-generator#readme",
   "devDependencies": {
     "jest": "^29.4.2"
+  },
+  "dependencies": {
+    "inquirer": "^6.5.0"
   }
 }
